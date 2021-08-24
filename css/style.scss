@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  color: #fff;
+}
+body {
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  background: linear-gradient(to right, #180044, #000a40);
+  height: 100vh;
+  padding: 0px 25px;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .p-20 {
+    padding: 20px 0;
+  }
+  .form-inner {
+    background: #00000080;
+    color: #a6e9ff;
+    padding: 20px;
+    max-width: 385px;
+    min-width: 385px;
+    text-align: center;
+    font-size: 12px;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      img {
+        max-width: 90px;
+        padding-bottom: 20px;
+      }
+      .span {
+        display: block;
+        text-align: end;
+      }
+    }
+    .logo {
+      img {
+        max-width: 105px;
+      }
+    }
+    .main-form-data {
+      .span {
+        display: block;
+      }
+      .input {
+        margin: 25px 0;
+        input {
+          color: #a2a2a2;
+          outline: none;
+          background: transparent;
+          border: none;
+          border-bottom: 2px solid #fff;
+          padding: 5px 0px 6px 10px;
+          font-size: 20px;
+          &::placeholder {
+            color: #a2a2a2;
+          }
+        }
+        .toggle {
+          position: absolute;
+          right: 40px;
+          background: none;
+          border: none;
+          outline: none;
+          font-size: 22px;
+          i {
+            color: #a6e9ff;
+          }
+        }
+      }
+      .show-hide {
+        padding: 3px 40px;
+      }
+    }
+    .form-btn {
+      background: #4dbdfb;
+      outline: none;
+      border: none;
+      color: #fff;
+      padding: 3px 11px;
+      font-size: 35px;
+      border-radius: 25px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+    .text-sign {
+      padding-bottom: 10px;
+    }
+    .btn-a {
+      a {
+        padding-top: 30px;
+        text-decoration: none;
+        color: #a6e9ff;
+        display: inline-block;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  .form--hidden {
+    display: none;
+  }
+}
+
+.footer-part {
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  img {
+    max-width: 200px;
+  }
+  .lang-inner {
+    margin: 10px 0;
+    color: #fff;
+    text-align: center;
+    background: #484848a6;
+    padding: 15px 30px;
+    border-radius: 25px;
+  }
+  .quit {
+    text-align: center;
+  }
+  h1 {
+    color: #4dbdfb;
+  }
+}

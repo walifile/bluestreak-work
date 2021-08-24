@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Blue Streak</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <section class="planets"></section>
+      <section class="main-form">
+        <form class="form-inner" id="login">
+          <div class="top">
+            <p><span>< </span>back</p>
+            <p class="schoolAccess">
+              Not Your School or Group?
+              <span class="span"> Click Here! </span>
+            </p>
+          </div>
+          <div class="logo">
+            <img src="images/bluestreak-logo@3x.png" alt="" />
+          </div>
+          <div class="main-form-data">
+            <p class="p-20">
+              Select the login that is right for You
+              <span class="span">us if You are in grades k-3 you may use</span>
+              Easylogin
+            </p>
+            <button class="form-btn" id="studentid">StudentID</button>
+            <div class="text-sign">
+              <p>Standard</p>
+              <p>Username + password login</p>
+              <p>for use with grades 3+</p>
+            </div>
+            <button class="form-btn">Easylogin</button>
+            <div>
+              <p>Easylogin for use with grades k-3</p>
+            </div>
+            <div class="btm-text">
+              <p class="btn-a">
+                <a
+                  href="https://web.bluestreakmath.com/users/sign_up"
+                  target="_blank"
+                >
+                  Dont Have An Account? Get
+                  <span>BlueStreak!</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </form>
+        <form class="form-inner form--hidden" id="signIn">
+          <div class="top">
+            <p class="backLogin"><span>< </span>back</p>
+            <p class="schoolAccess">
+              Not Your School or Group?
+              <span class="span"> Click Here! </span>
+            </p>
+          </div>
+          <div class="logo">
+            <img src="images/bluestreak-logo@3x.png" alt="" />
+          </div>
+          <div class="main-form-data">
+            <p class="p-20">
+              Use your id password
+              <span class="span">to login</span>
+            </p>
+            <div class="input">
+              <input type="text" placeholder="Student ID" />
+            </div>
+
+            <div class="input">
+              <input
+                type="password"
+                id="txtPassword"
+                class="form-control"
+                name="txtPassword"
+                placeholder="Password"
+              />
+              <button type="button" id="btnToggle" class="toggle">
+                <i id="eyeIcon" class="fa fa-eye"></i>
+              </button>
+            </div>
+
+            <button class="form-btn show-hide">Sign in</button>
+            <div class="btm-text">
+              <p class="btn-a">
+                <a
+                  href="https://web.bluestreakmath.com/users/sign_up"
+                  target="_blank"
+                >
+                  Dont Have An Account? Get
+                  <span>BlueStreak!</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </form>
+        <form class="form-inner form--hidden" id="schoolCode">
+          <div class="top">
+            <p class="backLogin"><span>< </span>back</p>
+          </div>
+          <div class="logo">
+            <img src="images/bluestreak-logo@3x.png" alt="" />
+          </div>
+          <div class="main-form-data">
+            <p class="p-20">
+              Welcome to bluestreak
+              <span class="span"> Enter your 3 digit school code or group</span>
+              Code get to started (EX:ABC or G210)
+            </p>
+            <div class="input">
+              <input type="text" placeholder="School or Access Code" />
+            </div>
+            <button class="form-btn show-hide">Continue</button>
+            <div class="btm-text">
+              <p class="btn-a">
+                <a
+                  href="https://web.bluestreakmath.com/users/sign_up"
+                  target="_blank"
+                >
+                  Dont Have An Account? Get
+                  <span>BlueStreak!</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </form>
+      </section>
+      <footer>
+        <div class="footer-part">
+          <div class="language">
+            <div class="lang-inner">
+              <p>Latest build version 9.10</p>
+              <p>build version 14.10</p>
+              <p>Api version 5</p>
+            </div>
+            <div class="lang-inner">
+              <h1>Espanol</h1>
+            </div>
+          </div>
+          <div class="quit">
+            <h1>QUIT</h1>
+            <img src="images/full-bluestreak-logo.png" alt="" />
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // password show hide
+      let passwordInput = document.getElementById("txtPassword"),
+        toggle = document.getElementById("btnToggle"),
+        icon = document.getElementById("eyeIcon");
+      function togglePassword() {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          icon.classList.add("fa-eye-slash");
+        } else {
+          passwordInput.type = "password";
+          icon.classList.remove("fa-eye-slash");
+        }
+      }
+      toggle.addEventListener("click", togglePassword, false);
+      // password show hide end
+
+      // form functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        const loginForm = document.querySelector("#login");
+        const SignForm = document.querySelector("#signIn");
+        const schoolCode = document.querySelector("#schoolCode");
+
+        document.querySelector("#studentid").addEventListener("click", (e) => {
+          e.preventDefault();
+          loginForm.classList.add("form--hidden");
+          SignForm.classList.remove("form--hidden");
+        });
+
+        document.querySelector(".backLogin").addEventListener("click", (e) => {
+          e.preventDefault();
+          loginForm.classList.remove("form--hidden");
+          SignForm.classList.add("form--hidden");
+          schoolCode.classList.add("form--hidden");
+        });
+
+        document
+          .querySelector(".schoolAccess")
+          .addEventListener("click", (e) => {
+            e.preventDefault();
+            schoolCode.classList.remove("form--hidden");
+            SignForm.classList.add("form--hidden");
+            loginForm.classList.add("form--hidden");
+          });
+      });
+    </script>
+  </body>
+</html>
