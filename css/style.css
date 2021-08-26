@@ -192,7 +192,6 @@ body {
   color: #4dbdfb;
 }
 
-<<<<<<< HEAD
 .main-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -240,7 +239,8 @@ body {
 .select-img {
   max-width: 350px;
   margin-bottom: 20px;
-=======
+}
+
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
   color: #d6d6d6 !important;
@@ -329,6 +329,5 @@ p {
 
 .pretest-footer img {
   max-width: 50px;
->>>>>>> e4729bb1449d844b8c819db29717d1f8246752b4
 }
 /*# sourceMappingURL=style.css.map */
