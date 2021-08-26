@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Meta-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ==== bootstrap ====  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- ==== style sheet ====  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Fontawesome-->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container pt-5">
+        <section class="pretest-test-sec">
+          <div class="pretest-test-part">
+            <div class="d-flex value">
+              <p>6</p>
+              <p>+</p>
+              <p>8</p>
+              <p>=</p>
+              <p id="ans">?</p>
+            </div>
+            <div class="text-center data">
+              <h2>Pretest</h2>
+              <p class="font">
+                Solve all problems in 4 minutes to skip ti posttest
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="pretest-footer">
+          <div class="img">
+            <img src="images/bluestreak-logo@3x.png" alt="" id="0" />
+            <img src="images/bluestreak-logo@3x.png" alt="" id="1" />
+            <img src="images/bluestreak-logo@3x.png" alt="" id="2" />
+            <img src="images/bluestreak-logo@3x.png" alt="" id="3" />
+            <img src="images/bluestreak-logo@3x.png" alt="" id="4" />
+            <img src="images/bluestreak-logo@3x.png" alt="" id="5" />
+            <img src="images/bluestreak-logo@3x.png" alt="" id="6" />
+            <img src="images/bluestreak-logo@3x.png" alt="" id="7" />
+            <img src="images/bluestreak-logo@3x.png" alt="" id="8" />
+            <img src="images/bluestreak-logo@3x.png" alt="" id="9" />
+          </div>
+        </section>
+      </div>
+    </div>
+    <!--Bootstrap Js-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // backend logic
+      function calculate(num_1, num_2, operator) {
+        let fractionEnabled = false,
+          sum,
+          length;
+
+        switch (operator) {
+          case "+":
+            sum = num_1 + num_2;
+            break;
+
+          case "-":
+            sum = num_1 - num_2;
+            break;
+
+          case "*":
+            sum = num_1 * num_2;
+            break;
+
+          case "/":
+            sum = num_1 / num_2;
+            break;
+        }
+        length = sum.toString().length;
+
+        const answer = document.getElementById("ans");
+        let counter = 0;
+        const inputs = document.querySelectorAll(".img img");
+
+        inputs.forEach((input) => {
+          input.addEventListener("click", () => {
+            if (length === 2) {
+              if (counter === 2) {
+                console.log(answer.textContent);
+                counter = 0;
+                answer.textContent = "?";
+              }
+              if (answer.textContent === "?") {
+                answer.textContent = input.getAttribute("id");
+                console.log(answer.textContent);
+              } else {
+                answer.textContent += input.getAttribute("id");
+                console.log(answer.textContent);
+              }
+            }
+            counter++;
+          });
+        });
+      }
+      calculate(1, 52, "+");
+    </script>
+  </body>
+</html>
