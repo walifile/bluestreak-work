@@ -191,4 +191,53 @@ body {
 .footer-part h1 {
   color: #4dbdfb;
 }
+
+.main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.game-menu {
+  text-align: center;
+  border-radius: 25px;
+  margin: 25px;
+}
+
+.selection-menu {
+  background: #3785ab69;
+  border-radius: 25px;
+  padding: 15px;
+  height: 100%;
+}
+
+.game-img {
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.laser {
+  background-color: #cecece;
+  display: block;
+  width: 20px;
+  height: 3px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.margin {
+  margin-bottom: 4rem;
+}
+
+.select-img {
+  max-width: 350px;
+  margin-bottom: 20px;
+}
 /*# sourceMappingURL=style.css.map */
