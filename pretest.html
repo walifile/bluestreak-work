@@ -24,15 +24,18 @@
 
     <title>Document</title>
   </head>
-  <body>
+  <body onclick="blink();">
     <div class="wrapper">
       <div class="container pt-5">
+        <section class="counter-timer">
+          <label id="minutes">00</label>:<label id="seconds">00</label>
+        </section>
         <section class="pretest-test-sec">
           <div class="pretest-test-part">
             <div class="d-flex value">
-              <p>6</p>
-              <p>+</p>
-              <p>8</p>
+              <p id="num-1">6</p>
+              <p id="operator">+</p>
+              <p id="num-2">8</p>
               <p>=</p>
               <p id="ans">?</p>
             </div>
@@ -44,18 +47,47 @@
             </div>
           </div>
         </section>
-        <section class="pretest-footer">
+        <!-- <section class="pretest-footer">
           <div class="img">
-            <img src="images/bluestreak-logo@3x.png" alt="" id="0" />
-            <img src="images/bluestreak-logo@3x.png" alt="" id="1" />
-            <img src="images/bluestreak-logo@3x.png" alt="" id="2" />
-            <img src="images/bluestreak-logo@3x.png" alt="" id="3" />
-            <img src="images/bluestreak-logo@3x.png" alt="" id="4" />
-            <img src="images/bluestreak-logo@3x.png" alt="" id="5" />
-            <img src="images/bluestreak-logo@3x.png" alt="" id="6" />
-            <img src="images/bluestreak-logo@3x.png" alt="" id="7" />
-            <img src="images/bluestreak-logo@3x.png" alt="" id="8" />
-            <img src="images/bluestreak-logo@3x.png" alt="" id="9" />
+            <img src="images/Capture.PNG" alt="" id="0" />
+            <img src="images/Capture.PNG" alt="" id="1" />
+            <img src="images/Capture.PNG" alt="" id="2" />
+            <img src="images/Capture.PNG" alt="" id="3" />
+            <img src="images/Capture.PNG" alt="" id="4" />
+            <img src="images/Capture.PNG" alt="" id="5" />
+            <img src="images/Capture.PNG" alt="" id="6" />
+            <img src="images/Capture.PNG" alt="" id="7" />
+            <img src="images/Capture.PNG" alt="" id="8" />
+            <img src="images/Capture.PNG" alt="" id="9" />
+          </div>
+        </section> -->
+        <section class="pretest-footer d-flex align-items-end">
+          <div class="row d-flex align-items-center">
+            <div class="col-lg-3">
+              <div class="img">
+                <img src="images/Capture.PNG" alt="" id="0" />
+                <img src="images/Capture.PNG" alt="" id="1" />
+                <img src="images/Capture.PNG" alt="" id="2" />
+                <img src="images/Capture.PNG" alt="" id="3" />
+                <img src="images/Capture.PNG" alt="" id="4" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex justify-content-center">
+                <div class="avatar-img">
+                  <img src="images/avatar-boy.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="img">
+                <img src="images/Capture.PNG" alt="" id="5" />
+                <img src="images/Capture.PNG" alt="" id="6" />
+                <img src="images/Capture.PNG" alt="" id="7" />
+                <img src="images/Capture.PNG" alt="" id="8" />
+                <img src="images/Capture.PNG" alt="" id="9" />
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -66,57 +98,6 @@
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
     ></script>
-    <script>
-      // backend logic
-      function calculate(num_1, num_2, operator) {
-        let fractionEnabled = false,
-          sum,
-          length;
-
-        switch (operator) {
-          case "+":
-            sum = num_1 + num_2;
-            break;
-
-          case "-":
-            sum = num_1 - num_2;
-            break;
-
-          case "*":
-            sum = num_1 * num_2;
-            break;
-
-          case "/":
-            sum = num_1 / num_2;
-            break;
-        }
-        length = sum.toString().length;
-
-        const answer = document.getElementById("ans");
-        let counter = 0;
-        const inputs = document.querySelectorAll(".img img");
-
-        inputs.forEach((input) => {
-          input.addEventListener("click", () => {
-            if (length === 2) {
-              if (counter === 2) {
-                console.log(answer.textContent);
-                counter = 0;
-                answer.textContent = "?";
-              }
-              if (answer.textContent === "?") {
-                answer.textContent = input.getAttribute("id");
-                console.log(answer.textContent);
-              } else {
-                answer.textContent += input.getAttribute("id");
-                console.log(answer.textContent);
-              }
-            }
-            counter++;
-          });
-        });
-      }
-      calculate(1, 52, "+");
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>

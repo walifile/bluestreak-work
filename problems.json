@@ -1,55 +1,74 @@
 [
   {
     "id": 1,
-    "name": "Leanne Graham",
-    "problem": "6 + 8"
+    "numeric_1": "12",
+    "operator": "+",
+    "numeric_2": "5",
+    "answer": "17"
   },
-
   {
     "id": 2,
-    "name": "Leanne Graham",
-    "problem": "6 + 3"
+    "numeric_1": "4",
+    "operator": "+",
+    "numeric_2": "6",
+    "answer": "10"
   },
-
   {
     "id": 3,
-    "name": "Leanne Graham",
-    "problem": "1 + 9"
+    "numeric_1": "7",
+    "operator": "+",
+    "numeric_2": "2",
+    "answer": "9"
   },
-
   {
     "id": 4,
-    "name": "Leanne Graham",
-    "problem": "16 + 0"
+    "numeric_1": "9",
+    "operator": "+",
+    "numeric_2": "3",
+    "answer": "12"
   },
   {
     "id": 5,
-    "name": "Leanne Graham",
-    "problem": "16 + 2"
+    "numeric_1": "7",
+    "operator": "+",
+    "numeric_2": "3",
+    "answer": "10"
   },
   {
     "id": 6,
-    "name": "Leanne Graham",
-    "problem": "4 + 5"
+
+    "numeric_1": "3",
+    "operator": "+",
+    "numeric_2": "0",
+    "answer": "3"
   },
   {
     "id": 7,
-    "name": "Leanne Graham",
-    "problem": "8 + 9"
+    "numeric_1": "1",
+    "operator": "+",
+    "numeric_2": "0",
+    "answer": "1"
   },
   {
     "id": 8,
-    "name": "Leanne Graham",
-    "problem": "2 + 8"
+    "numeric_1": "9",
+    "operator": "+",
+    "numeric_2": "5",
+    "answer": "14"
   },
   {
     "id": 9,
-    "name": "Leanne Graham",
-    "problem": "6 + 5"
+
+    "numeric_1": "5",
+    "operator": "+",
+    "numeric_2": "7",
+    "answer": "12"
   },
   {
     "id": 10,
-    "name": "Leanne Graham",
-    "problem": "6 + 7"
+    "numeric_1": "4",
+    "operator": "+",
+    "numeric_2": "2",
+    "answer": "6"
   }
 ]

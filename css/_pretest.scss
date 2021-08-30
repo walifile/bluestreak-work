@@ -1,5 +1,15 @@
+.counter-timer {
+  display: flex;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: #a6e9ff;
+  label {
+    color: #a6e9ff;
+  }
+}
+
 .pretest-test-sec {
-  background: #252525;
+  background: #000000b3;
   color: #a6e9ff;
 }
 .pretest-test-part {
@@ -31,7 +41,19 @@ p {
 }
 
 .pretest-footer {
-  img {
-    max-width: 50px;
+  .avatar-img {
+    img {
+      width: 100%;
+      max-width: 400px;
+    }
   }
+  height: 65vh;
+  .img {
+    img {
+      max-width: 125px;
+    }
+  }
+}
+
+.pretest-bottom {
 }
