@@ -54,7 +54,7 @@ callJSONPlaceholder()
         document.getElementById("operator").textContent = opr;
 
         solved = false;
-
+        // event jo ha event ko target krta ha jo b apply kiya ho aur event.target os element ko
         inputs.forEach((input) => {
           input.addEventListener("click", () => {
             if (counter === 2) {
