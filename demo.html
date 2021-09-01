@@ -4,9 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="style.scss" />
     <script src="main.js"></script>
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <img src="images/menu icon.png" id="sidebar" alt="no image" />
+
+    <div id="options-menu">
+      <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" id="sound" />
+        <input type="range" min="1" max="100" value="50" id="music" />
+      </div>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
 </html>

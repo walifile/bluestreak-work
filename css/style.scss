@@ -11,9 +11,11 @@ body {
 }
 
 .wrapper {
-  background: linear-gradient(to right, #180044, #001379);
+  background: url("../images/bg.png");
   height: 100vh;
   padding: 0px 25px;
+  background-size: contain;
+  background-position: center;
 }
 
 .main-form {
@@ -26,7 +28,7 @@ body {
     padding: 20px 0;
   }
   .form-inner {
-    background: #00000080;
+    background: #00306b33;
     color: #a6e9ff;
     padding: 20px;
     max-width: 385px;
@@ -187,5 +189,56 @@ body {
   margin-bottom: 20px;
 }
 
+.easylogin-main {
+  padding: 0 2rem;
+
+  .shapes {
+    margin-top: 10px;
+    .shape-img-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 65px;
+        height: 65px;
+        margin: 0 5px;
+      }
+    }
+  }
+}
+.easylogin-top {
+  border-bottom: 3px solid #fff;
+  display: flex;
+  padding-bottom: 15px;
+  justify-content: center;
+  img {
+    margin: 0 7px;
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+#sound,
+#music {
+  width: 60%;
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#options-menu {
+  display: none;
+  text-align: center;
+}
+#sidebar {
+  width: 50px;
+  height: 25px;
+}
+
+.sound {
+  position: absolute;
+  top: 67px;
+  left: 55px;
+}
+@import "particle";
 @import "dashboard";
 @import "pretest";

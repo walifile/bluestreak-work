@@ -9,8 +9,17 @@
 }
 
 .pretest-test-sec {
-  background: #000000b3;
+  background: #00306b33;
   color: #a6e9ff;
+  input {
+    border: none;
+    outline: none;
+    font-size: 3rem;
+    width: 83px;
+    color: #a6e9ff;
+    background: none;
+    font-size: 4.5rem;
+  }
 }
 .pretest-test-part {
   display: flex;
@@ -41,19 +50,97 @@ p {
 }
 
 .pretest-footer {
+  .btns-1 {
+    position: relative;
+    left: 0px;
+    bottom: -24px;
+  }
+  .btns-2 {
+    position: relative;
+    right: -14rem;
+    top: 25px;
+  }
+  .tag {
+    position: absolute;
+    &:nth-child(1) {
+      top: -120px;
+    }
+    &:nth-child(2) {
+      left: 111px;
+      top: -58px;
+    }
+    &:nth-child(3) {
+      left: 219px;
+      top: 8px;
+    }
+    &:nth-child(4) {
+      top: 0;
+    }
+    &:nth-child(5) {
+      top: 61px;
+      left: 106px;
+    }
+  }
+  .tags {
+    position: absolute;
+    &:nth-child(1) {
+      top: 0;
+      left: 13.3rem;
+    }
+    &:nth-child(2) {
+      top: 8px;
+    }
+    &:nth-child(3) {
+      left: 103px;
+      top: -58px;
+    }
+    &:nth-child(4) {
+      top: -120px;
+      left: 210px;
+    }
+    &:nth-child(5) {
+      top: 61px;
+      left: 106px;
+    }
+  }
   .avatar-img {
     img {
       width: 100%;
-      max-width: 400px;
+      max-width: 190px;
     }
   }
-  height: 65vh;
+  height: 55vh;
   .img {
     img {
-      max-width: 125px;
+      width: 120px;
     }
   }
 }
 
+.avatar-lines {
+  img {
+    max-width: 700px;
+    width: 100%;
+  }
+}
 .pretest-bottom {
+}
+
+.btm-line-content {
+  padding: 0 25px;
+  position: relative;
+  top: -26px;
+  p {
+    color: #a6e9ff;
+  }
+
+  h2 {
+    color: #a6e9ff;
+  }
+}
+
+.position-avaar {
+  position: relative;
+  left: 17rem;
+  bottom: -5rem;
 }

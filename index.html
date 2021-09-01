@@ -16,6 +16,22 @@
 
   <body>
     <div class="wrapper">
+      <section class="sound">
+        <img src="images/menu icon.png" id="sidebar" alt="no image" />
+
+        <div id="options-menu">
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" id="sound" />
+            <input type="range" min="1" max="100" value="50" id="music" />
+          </div>
+        </div>
+      </section>
+      <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+      </div>
       <section class="planets"></section>
       <section class="main-form">
         <form class="form-inner" id="login">
@@ -35,7 +51,9 @@
               <span class="span">us if You are in grades k-3 you may use</span>
               Easylogin
             </p>
-            <button class="form-btn" id="studentid">StudentID</button>
+            <button class="form-btn" id="studentid" target="signIn">
+              StudentID
+            </button>
             <div class="text-sign">
               <p>Standard</p>
               <p>Username + password login</p>
@@ -105,7 +123,7 @@
             </div>
           </div>
         </form>
-        <form class="form-inner form--hidden" id="schoolCode">
+        <form class="form-inner form--hidden" id="schoolCode ">
           <div class="top">
             <p class="backLogin"><span>< </span>back</p>
           </div>
@@ -135,28 +153,106 @@
             </div>
           </div>
         </form>
+        <!--  -->
+        <form class="form-inner form--hidden" id="schoolCode2">
+          <div class="top">
+            <p class="backLogin"><span>< </span>back</p>
+          </div>
+          <div class="logo">
+            <img src="images/bluestreak-logo@3x.png" alt="" />
+          </div>
+          <div class="main-form-data">
+            <p class="p-20">
+              Click on the shapes
+              <span class="span"> to login with Easylogin</span>
+            </p>
+            <div class="easylogin-main" id="easylogin">
+              <div class="easylogin-top">
+                <img src="images/easy-btn.png" alt="" id="easy1" />
+                <img src="images/easy-btn.png" alt="" id="easy2" />
+                <img src="images/easy-btn.png" alt="" id="easy3" />
+                <img src="images/easy-btn.png" alt="" id="easy4" />
+                <img src="images/easy-btn.png" alt="" id="easy5" />
+              </div>
+              <div class="shapes">
+                <div class="shape-img-div">
+                  <img src="images/circle.png" alt="" />
+                  <img src="images/triangle.png" alt="" />
+                  <img src="images/moon.png" alt="" />
+                </div>
+                <div class="shape-img-div">
+                  <img src="images/heart.png" alt="" />
+                  <img src="images/pentagon.png" alt="" />
+                  <img src="images/square.png" alt="" />
+                </div>
+                <div class="shape-img-div">
+                  <img src="images/sun.png" alt="" />
+                  <img src="images/diamond.png" alt="" />
+                  <img src="images/star.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <button class="form-btn show-hide">Continue</button>
+            <div class="btm-text">
+              <p class="btn-a">
+                <a
+                  href="https://web.bluestreakmath.com/users/sign_up"
+                  target="_blank"
+                >
+                  Dont Have An Account? Get
+                  <span>BlueStreak!</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </form>
+        <!-- <section>
+          <div class="d-flex justify-center">
+            <div>
+              <img src="" alt="">
+            </div>
+          </div>
+        </section> -->
       </section>
       <footer>
         <div class="footer-part">
           <div class="language">
             <div class="lang-inner">
-              <p>Latest build version 9.10</p>
-              <p>build version 14.10</p>
-              <p>Api version 5</p>
+              <h1>Español</h1>
             </div>
-            <div class="lang-inner">
-              <h1>Espanol</h1>
+            <div class="quit">
+              <img src="images/full-bluestreak-logo.png" alt="" />
             </div>
-          </div>
-          <div class="quit">
-            <h1>QUIT</h1>
-            <img src="images/full-bluestreak-logo.png" alt="" />
           </div>
         </div>
       </footer>
     </div>
 
     <script>
+      // var mainLogin = [
+      //   "login",
+      //   "schoolCode",
+      //   "signIn",
+      //   "schoolCode2",
+      //   "easylogin",
+      // ];
+
+      // function formTest(id) {
+
+      //   mainLogin.forEach((x) => {
+      //     var id = document.getElementById(x + "");
+      //     if(x === id){
+
+      //       continue;
+
+      //     }
+
+      //     //
+
+      //   });
+      // }
+
       // password show hide
       let passwordInput = document.getElementById("txtPassword"),
         toggle = document.getElementById("btnToggle"),
@@ -173,34 +269,52 @@
       toggle.addEventListener("click", togglePassword, false);
       // password show hide end
 
-      // form functionality
-      document.addEventListener("DOMContentLoaded", () => {
-        const loginForm = document.querySelector("#login");
-        const SignForm = document.querySelector("#signIn");
-        const schoolCode = document.querySelector("#schoolCode");
+      //form functionality
+      const loginForm = document.querySelector("#login");
+      const SignForm = document.querySelector("#signIn");
+      const schoolCode = document.querySelector("#schoolCode");
 
-        document.querySelector("#studentid").addEventListener("click", (e) => {
-          e.preventDefault();
-          loginForm.classList.add("form--hidden");
-          SignForm.classList.remove("form--hidden");
-        });
+      document.querySelector("#studentid").addEventListener("click", (e) => {
+        e.preventDefault();
 
-        document.querySelector(".backLogin").addEventListener("click", (e) => {
-          e.preventDefault();
-          loginForm.classList.remove("form--hidden");
-          SignForm.classList.add("form--hidden");
-          schoolCode.classList.add("form--hidden");
-        });
-
-        document
-          .querySelector(".schoolAccess")
-          .addEventListener("click", (e) => {
-            e.preventDefault();
-            schoolCode.classList.remove("form--hidden");
-            SignForm.classList.add("form--hidden");
-            loginForm.classList.add("form--hidden");
-          });
+        // let target = e.target.getAttribute("target");
+        // formTest(target);
+        loginForm.classList.add("form--hidden");
+        SignForm.classList.remove("form--hidden");
       });
+
+      document.querySelector(".backLogin").addEventListener("click", (e) => {
+        e.preventDefault();
+        loginForm.classList.remove("form--hidden");
+        SignForm.classList.add("form--hidden");
+        schoolCode.classList.add("form--hidden");
+      });
+
+      document.querySelector(".schoolAccess").addEventListener("click", (e) => {
+        e.preventDefault();
+        schoolCode.classList.remove("form--hidden");
+        SignForm.classList.add("form--hidden");
+        loginForm.classList.add("form--hidden");
+      });
+      // easy login start
+      let counter = 1;
+      var shapes = document.querySelectorAll(".shape-img-div img");
+      shapes.forEach((img) => {
+        img.addEventListener("click", (e) => {
+          if (counter === 6) {
+            return;
+          }
+          let shape1 = document.getElementById("easy" + counter);
+          var srcImg = e.target.src;
+          shape1.src = srcImg;
+          counter += 1;
+        });
+      });
+
+      //  easy login end
+
+      // audio slider
     </script>
+    <script src="options.js"></script>
   </body>
 </html>

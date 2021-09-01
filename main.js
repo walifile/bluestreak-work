@@ -1,20 +1,20 @@
-function makeRequest(location) {
-  return new Promise((resolve, reject) => {
-    console.log("Making request to Google");
-    if (location === "Google") {
-      resolve(`Google says hi`);
-    } else {
-      reject(`We can only talk to Goolge people`);
-    }
-  });
-}
+// function makeRequest(location) {
+//   return new Promise((resolve, reject) => {
+//     console.log("Making request to Google");
+//     if (location === "Google") {
+//       resolve(`Google says hi`);
+//     } else {
+//       reject(`We can only talk to Goolge people`);
+//     }
+//   });
+// }
 
-function processRequest(response) {
-  return new Promise((resolve) => {
-    console.log("Processing response");
-    resolve(`Extra information ${response}`);
-  });
-}
+// function processRequest(response) {
+//   return new Promise((resolve) => {
+//     console.log("Processing response");
+//     resolve(`Extra information ${response}`);
+//   });
+// }
 
 // Promises method
 
